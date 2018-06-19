@@ -1,0 +1,71 @@
+
+.nav-link {
+   color: red;
+}
+
+.navbar-dark .navbar-brand {
+	color:blue;
+}
+
+@font-face {
+    font-family: WinterStripe;
+    src: url("../assets/fonts/WinterPark.otf") format("opentype");
+}
+
+@font-face {
+    font-family: alien;
+    src: url(../fonts/sf-alien-encounters.regular.ttf)
+}
+
+/*body {
+   background-image: url("../img/wordcloud640.jpg")
+}*/
+
+.lightgreen {
+  background-color: #e5fffe;
+}
+.green {
+  background-color: #a1e6e4;
+}
+
+.lightpurple {
+    background-color: #ffd6ff;
+}
+
+.purple {
+    background-color: #eba4e4;
+}
+
+.lightyellow {
+    background-color: #fffec7;
+}
+
+.yellow {
+    background-color: #faf884;
+}
+
+/* Intro base class */
+.intro {
+  width: 40%;
+  /*float: left;*/
+  text-align: justify-left;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  font-size: 1.30rem;
+}
+
+.intro img {
+    padding-bottom:2rem;
+    align-content: space-around;
+}
+ul {
+    list-style-type: none;
+    border-top: .05rem solid lightgray;
+    text-align:left;
+}
+
+div#titleTop {
+	font-family: alien;
+	font-size: 4em;
+    text-align: center;
+}
