@@ -1,25 +1,4 @@
 
-.nav-link {
-   color: red;
-}
-
-.navbar-dark .navbar-brand {
-	color:blue;
-}
-
-@font-face {
-    font-family: WinterStripe;
-    src: url("../assets/fonts/WinterPark.otf") format("opentype");
-}
-
-@font-face {
-    font-family: alien;
-    src: url(../fonts/sf-alien-encounters.regular.ttf)
-}
-
-/*body {
-   background-image: url("../img/wordcloud640.jpg")
-}*/
 
 .lightgreen {
   background-color: #e5fffe;
@@ -44,28 +23,171 @@
     background-color: #faf884;
 }
 
+.navbar {
+  padding-bottom: 0;
+  border-top: .3rem solid #ffd6ff; /*#fffec7;*/
+  border-bottom: .3rem solid #ffd6ff;
+}
+
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link
+{
+  color: #fffec7; /* light yellow */
+}
+
+/*.row > div[class*='col-'] { 
+  display: flex;
+  flex:1 0 auto;
+}*/
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+/*    color: lightgreen;*/
+    text-decoration: none;
+}
+
+a:hover {
+    color: white; 
+    text-decoration: none;
+}
+
+a.applink {
+  color: black;
+}
+
+.applink:hover {
+  color: slateblue; 
+}
+
+#phone {
+  color: #fffec7;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+.email {
+ color: #fffec7;
+}
+
+.email:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#phone:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.love > li {
+      color: #ffd6ff; /* lightpurple */
+    width:100%;
+/*    margin-right:0;
+    padding-right:0;*/
+}
+
+ul.love {
+  border-top: none;
+    width: 100%;
+/*    margin-right:0;
+    padding-right:0;*/
+/*  padding-top: 0.5rem;*/
+/*  margin-left: 4rem;*/
+}
+
+.name {
+  font-size: 2rem;
+  border: none;
+  padding: none;
+  color: #ffd6ff;
+  margin-left: 6rem;
+  margin-right: 4rem;
+  margin-bottom: 0;
+  vertical-align: center;
+  font-weight: 500;
+/*  padding-bottom: 0;
+  padding-top: 0;*/
+  /*color: #fffec7; *//* purple #eba4e4;*/
+}
+
+.navbar-brand {
+  background-color: .purple;
+  color: white;
+}
+
+@font-face {
+    font-family: WinterStripe;
+    src: url("../assets/fonts/WinterPark.otf") format("opentype");
+}
+
+@font-face {
+    font-family: alien;
+    src: url(../fonts/sf-alien-encounters.regular.ttf)
+}
+
 /* Intro base class */
 .intro {
-  width: 40%;
+ /* width: 25%;*/
   /*float: left;*/
-  text-align: justify-left;
-  margin-bottom: 4rem;
-  padding: 2rem;
+ /* text-align: justify-left;*/
+/*  margin-bottom: 1rem;
+  margin-left: 2rem;
+  padding: 1rem 1rem;*/
+  margin-left: 4%;
   font-size: 1.30rem;
 }
 
-.intro img {
-    padding-bottom:2rem;
-    align-content: space-around;
+/*#titleTop img {
+  width: 10%;
+  vertical-align: bottom;
 }
+*/
+/*
+header {
+    margin-bottom: 1em;
+}*/
+
+main {
+  padding-top: 2em;
+  width:100%;
+}
+
+.introrow {
+    background-color: #ffd6ff;
+}
+.intro > img {
+    align-content: center;
+ /*   padding-bottom: 2rem;
+    padding-left: 1rem;*/
+}
+/*
+.introrow {
+    background-color: #ffd6ff;
+}*/
+
 ul {
     list-style-type: none;
-    border-top: .05rem solid lightgray;
-    text-align:left;
+    border-top: .05rem solid #fffec7; /* light yellow */
+    text-align: left;
+    /*color: #eba4e4;*/
+}
+
+#titleTop > h3 {
+    background-color: #ffd6ff;
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: 100%;
 }
 
 div#titleTop {
-	font-family: alien;
-	font-size: 4em;
-    text-align: center;
+  font-family: alien;
+  font-size: 3rem;
+  text-align: center;
+    padding-top: 2rem;
+/*  border-top: 2rem solid #eba4e4;*/
 }
