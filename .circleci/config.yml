@@ -1,0 +1,73 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.9.4 # primary container, where your job's commands are run
+    steps:
+      # checkout from github
+      # webstorm gui github
+      - checkout
+      
+      # install dependencies
+      - run:
+          name: Install
+          command: npm install
+
+      # save to cache node modules
+      - save_cache:
+          paths: 
+            - node_modules
+          key: v1-node-modules-cache-{{ checksum "package.json" }}
+
+      - run:
+          name: Build project
+          command: npm run build
+
+
+  unittest:
+    docker:
+      - image: circleci/node:8.9.4 # primary container, where your job's commands are run
+    steps:
+
+      - checkout
+
+      # save to cache node modules
+      - restore_cache:
+          paths: 
+            - node_modules
+          key: v1-node-modules-cache-{{ checksum "package.json" }}
+
+      - run:
+          name: Unit test
+          command: npm run test:unit
+
+
+  initest:
+    docker:
+      - image: circleci/node:8.9.4 # primary container, where your job's commands are run
+    steps:
+
+      - checkout
+
+      # save to cache node modules
+      - restore_cache:
+          paths: 
+            - node_modules
+          key: v1-node-modules-cache-{{ checksum "package.json" }}
+
+      - run:
+          name: integration test
+          command: npm run test:integration
+
+workflows:
+  version: 2
+  workflow:
+    jobs:
+    - build
+    - unittest:
+        requires:
+          - build
+    - initest:
+        requires:
+          - build
+          
